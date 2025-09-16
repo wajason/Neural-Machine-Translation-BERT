@@ -7,7 +7,7 @@ This repository contains a single Jupyter notebook that implements and explains 
 
 ---
 
-# 📌 What's included
+## 📌 What's included
 - `Neural_Machine_Translation_with_RNNs.ipynb` — A complete Jupyter Notebook implementing:
   - Subword/token handling (SentencePiece)
   - Vocabulary building (Vocab / VocabEntry)
@@ -21,7 +21,7 @@ This repository contains a single Jupyter notebook that implements and explains 
 
 ---
 
-# ✨ Highlights
+## ✨ Highlights
 - Implements a full **Seq2Seq + Attention** NMT model (RNN-based).
 - Clear, commented code mapping formulas → PyTorch implementation.
 - Evaluation using BLEU; beam search decoding included.
@@ -29,7 +29,7 @@ This repository contains a single Jupyter notebook that implements and explains 
 
 ---
 
-# 🧭 How to run
+## 🧭 How to run
 
 Clone this repo:
 '''
@@ -37,59 +37,42 @@ Clone this repo:
   cd NMT-RNN-CS224N-Assignment3
 '''
 
-Prepare the assignment data:
-
-The original CS224N assignment package (a4.zip) contains sample source/target files and SentencePiece examples. Follow the notebook cell instructions to train SentencePiece models or to use provided files if you have a4.zip.
-
-Do not upload or share any data you do not have rights to—see the Disclaimer below.
-
-Launch the notebook:
-
-jupyter lab   # or jupyter notebook
+Open Neural_Machine_Translation_with_RNNs.ipynb and run the cells step-by-step!!
 
 
-Open Neural_Machine_Translation_with_RNNs.ipynb and run the cells step-by-step.
+## 🧾 Notebook structure (quick outline)
 
-# 🧾 Notebook structure (quick outline)
+1. Data & Tokenization — SentencePiece training / tokenization and autograder_read_corpus.
 
-Data & Tokenization — SentencePiece training / tokenization and autograder_read_corpus.
+2. Vocabulary — VocabEntry, Vocab building, saving/loading.
 
-Vocabulary — VocabEntry, Vocab building, saving/loading.
+3. Embedding — ModelEmbeddings (source & target).
 
-Embedding — ModelEmbeddings (source & target).
+4. Encoder — Bidirectional LSTM producing enc_hiddens.
 
-Encoder — Bidirectional LSTM producing enc_hiddens.
+5. Decoder — LSTMCell with attention (step()), combined-output projection.
 
-Decoder — LSTMCell with attention (step()), combined-output projection.
+6. Training — forward pass, loss computation (cross-entropy on gold words), optimization.
 
-Training — forward pass, loss computation (cross-entropy on gold words), optimization.
+7. Evaluation — compute BLEU, and beam search for decoding.
 
-Evaluation — compute BLEU, and beam search for decoding.
+8. Sanity checks & autograder compatibility stubs.
 
-Sanity checks & autograder compatibility stubs.
 
-# 📈 Results
+## 📈 Results
 
 With default hyperparameters (not extensively tuned) the notebook successfully completes the assignment’s checks / autograder conditions (per personal test).
 
 The notebook prints training/evaluation metrics and example translations. Results will vary by seed, hardware, and tokenization settings.
 
+
 # ⚠️ Academic Integrity, License & Disclaimer
 
 This repository is for personal study, learning, and reference purposes only.
-
-Not affiliated with nor endorsed by Stanford University or the CS224N course staff.
-
-Do not use this repository as a substitute for your own assignment submissions. If you are enrolled in CS224N (or any course), do not submit this notebook or derived work as your own.
-
-Data & licensing: This repo does not include assignment datasets. If you download original course data or any other dataset, ensure you have the right to use and redistribute it and comply with its license. Do not commit proprietary or third-party data into this public repo.
 
 If you reuse code from this notebook in a public project, please include appropriate attribution to CS224N and to any referenced papers.
 
 # 📚 References (key)
 
-Stanford CS224N: Natural Language Processing with Deep Learning — Assignment 3 (Neural Machine Translation).
+1. Stanford CS224N: Natural Language Processing with Deep Learning — Assignment 3 (Neural Machine Translation).
 
-Luong, Pham & Manning (2015), Effective Approaches to Attention-based Neural Machine Translation (Luong attention).
-
-General seq2seq literature (Bahdanau et al., Luong et al.).
