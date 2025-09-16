@@ -66,14 +66,15 @@ With default hyperparameters (not extensively tuned) the notebook successfully c
 The notebook prints training/evaluation metrics and example translations. Results will vary by seed, hardware, and tokenization settings.
 
 
-# ⚠️ Academic Integrity, License & Disclaimer
+## ⚠️ Academic Integrity, License & Disclaimer
 
 This repository is for personal study, learning, and reference purposes only.
 
 If you reuse code from this notebook in a public project, please include appropriate attribution to CS224N and to any referenced papers.
 
-# 📚 References (key)
+## 📚 References (key)
 
 1. Stanford CS224N: Natural Language Processing with Deep Learning — Assignment 3 (Neural Machine Translation).
+
 
 
