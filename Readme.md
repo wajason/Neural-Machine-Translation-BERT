@@ -33,7 +33,7 @@ This repository contains a single Jupyter notebook that implements and explains 
 
 Clone this repo:
 ```bash
-  git clone https://github.com/<your-username>/NMT-RNN-CS224N-Assignment3.git
+  git clone https://github.com/wajason/Neural-Machine-Translation-RNN.git
   cd NMT-RNN-CS224N-Assignment3
 ```
 
@@ -75,6 +75,7 @@ If you reuse code from this notebook in a public project, please include appropr
 ## 📚 References (key)
 
 1. Stanford CS224N: Natural Language Processing with Deep Learning — Assignment 3 (Neural Machine Translation).
+
 
 
 
